@@ -1,0 +1,20 @@
+#! /usr/bin/env php
+<?php
+
+
+
+
+
+
+
+
+/*
+function  ob($function){
+    ob_start();
+    $function();
+    $produced = ob_get_contents();
+    ob_end_clean();
+    return $produced;
+}
+echo ob(function(){echo 123; echo PHP_EOL;});
+*/

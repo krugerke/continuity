@@ -1,0 +1,37 @@
+#! /usr/bin/env php
+<?php
+require_once __DIR__.'/../config/bootstrap.php';
+
+use Continuity\Model\Test;
+
+$test = new Test();
+
+$test->test();
+
+//$entityManager->find('Continuity\Model\Test', 1);
+
+$entityManager = \Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($entityManager);
+
+/*
+
+$server = new \swoole_server("127.0.0.1", 9501);
+
+// Register the function for the event `connect`
+$server->on('connect', function($server, $fd){
+    echo "Client : Connect.\n";
+});
+
+// Register the function for the event `receive`
+$server->on('receive', function($server, $fd, $from_id, $data){
+    $server->send($fd, "Server: " . $data);
+});
+
+// Register the function for the event `close`
+$server->on('close', function($server, $fd){
+    echo "Client: {$fd} close.\n";
+});
+
+// Start the server
+$server->start();
+
+*/
