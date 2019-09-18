@@ -13,8 +13,10 @@
     "php": "^7.3",
     "ext-ds": "^1.2.9",
     "cboden/ratchet": "^0.4.1",
+    "doctrine/orm": "^2.6",
     "doctrine/skeleton-mapper": "^1.0",
-    "php-base/exceptions": "2.0.*"
+    "php-base/exceptions": "2.0.*",
+    "symfony/dotenv": "^4.3"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master",

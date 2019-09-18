@@ -10,7 +10,7 @@ $test->test();
 
 //$entityManager->find('Continuity\Model\Test', 1);
 
-$entityManager = \Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($entityManager);
+//$entityManager = \Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($entityManager);
 
 /*
 
