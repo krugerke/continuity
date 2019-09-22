@@ -2,11 +2,15 @@
 namespace Continuity;
 
 use Continuity\Interfaces\Node;
-use Iterator;
+use \SplObserver;
+use \SplObjectStorage;
 
-abstract class Resource implements Node
+abstract class Resource extends SplObjectStorage implements Node, SplObserver
 {
-    private static $resources;
+    public function __construct($argc = 0, $argv = 0)
+    {
+
+    }
 
     protected static function add(Node $node) : Node
     {
@@ -18,5 +22,8 @@ abstract class Resource implements Node
 
     }
 
-    abstract protected function setResourceContainer(Iterator $resource);
+    public function update(\SplSubject $subject)
+    {
+
+    }
 }

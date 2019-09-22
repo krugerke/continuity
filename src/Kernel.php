@@ -2,13 +2,13 @@
 namespace Continuity;
 
 use Continuity\Interfaces\Node;
-use Iterator;
+use \SplSubject;
 
-final class Kernel extends Resource
+final class Kernel extends Resource implements SplSubject
 {
     public function __construct($argc = 0, $argv = 0)
     {
-        $this->setResourceContainer(new \SplObjectStorage());
+        parent::__construct();
     }
 
     private function execute(InputInterface $input, OutputInterface $output)
@@ -16,12 +16,17 @@ final class Kernel extends Resource
 
     }
 
-    public function run()
+    public function attach(\SplObserver $observer)
     {
 
     }
 
-    protected function setResourceContainer(Iterator $resource)
+    public function detach(SplObserver $observer)
+    {
+
+    }
+
+    public function notify()
     {
 
     }
