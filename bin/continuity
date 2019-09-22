@@ -2,7 +2,7 @@
 <?php
 require_once __DIR__.'/../config/bootstrap.php';
 
-use Continuity\Model\Test;
+use Continuity\Module\Test;
 
 $test = new Test();
 
